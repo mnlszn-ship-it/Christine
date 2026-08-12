@@ -38,9 +38,16 @@ reasonButton.addEventListener("click", () => {
 
   if (currentReason >= reasons.length) {
     currentReason = 0;
-  }
-reasonText.style.opacity = "0";
-reasonText.style.transform = "translateY(10px)";
+  }reasonText.classList.remove("reason-show");
+reasonText.classList.add("reason-hide");
+
+setTimeout(() => {
+  reasonNumber.textContent = currentReason + 1;
+  reasonText.textContent = reasons[currentReason];
+
+  reasonText.classList.remove("reason-hide");
+  reasonText.classList.add("reason-show");
+}, 350);
 
 setTimeout(() => {
   reasonNumber.textContent = currentReason + 1;
