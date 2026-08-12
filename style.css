@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #fff;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255,70,130,.25), transparent 30%),
+    radial-gradient(circle at 80% 85%, rgba(255,150,190,.18), transparent 30%),
+    linear-gradient(145deg,#09040a,#280916,#12050d);
+}
+
+.card {
+  width: min(720px,100%);
+  padding: 45px 30px;
+  text-align: center;
+  background: rgba(255,255,255,.075);
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 30px 80px rgba(0,0,0,.5);
+}
+
+.small-title {
+  color: #ff9fc3;
+  font-size: .75rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.6rem,10vw,5rem);
+  line-height: .95;
+  background: linear-gradient(135deg,#fff,#ffb3d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro {
+  max-width: 560px;
+  margin: 25px auto 30px;
+  color: #e8cbd7;
+  line-height: 1.8;
+}
+
+button {
+  border: none;
+  padding: 16px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg,#ff4f91,#ff9dc1);
+  color: #260711;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 35px rgba(255,79,145,.3);
+}
+
+.hidden {
+  display: none;
+}
+
+#letter {
+  text-align: left;
+  margin-top: 40px;
+  animation: reveal .9s ease;
+}
+
+.divider {
+  width: 70px;
+  height: 3px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background: #ff6fa7;
+}
+
+#letter p {
+  color: #ead2dc;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+.quote {
+  margin: 32px 0;
+  padding: 25px;
+  text-align: center;
+  border-left: 3px solid #ff6fa7;
+  background: rgba(255,79,145,.08);
+  border-radius: 0 18px 18px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.highlight {
+  padding: 20px;
+  background: rgba(255,79,145,.08);
+  border-radius: 18px;
+  color: #fff !important;
+}
+
+.final-message {
+  text-align: center;
+  margin-top: 40px !important;
+  color: #fff !important;
+  font-size: 1.5rem !important;
+  font-weight: 700;
+}
+
+.signature {
+  text-align: right;
+  color: #fff !important;
+}
+
+footer {
+  margin-top: 40px;
+  color: rgba(255,255,255,.4);
+  font-size: .75rem;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
