@@ -144,6 +144,51 @@ footer {
   margin: 30px auto;
   border-radius: 24px;
   border: 1px solid rgba(255,255,255,.15);
-  box-shadow: 0 20px 50px rgba(0,0,0,.45);
+  box-shadow: 0 20px 50px rgba(0,0,0,..reasons {
+  margin-top: 60px;
+  padding: 30px 20px;
+  text-align: center;
+  background: rgba(255,79,145,.07);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 25px;
+}
 
+.reasons h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.reason-intro {
+  color: #dcbeca !important;
+  font-size: .95rem !important;
+}
+
+.reason-box {
+  min-height: 150px;
+  margin: 25px 0;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.18);
+  border-radius: 20px;
+}
+
+#reasonNumber {
+  color: #ff8fb8;
+  font-size: .8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+#reasonText {
+  color: #fff !important;
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+}
+
+#reasonButton {
+  margin-top: 5px;
 }
