@@ -289,3 +289,13 @@ body::after {
     opacity: 0;
   }
 }
+.reason-hide {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.reason-show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .6s ease, transform .6s ease;
+}
