@@ -39,7 +39,16 @@ reasonButton.addEventListener("click", () => {
   if (currentReason >= reasons.length) {
     currentReason = 0;
   }
+reasonText.style.opacity = "0";
+reasonText.style.transform = "translateY(10px)";
 
+setTimeout(() => {
   reasonNumber.textContent = currentReason + 1;
   reasonText.textContent = reasons[currentReason];
+
+  reasonText.style.transition = "all .5s ease";
+  reasonText.style.opacity = "1";
+  reasonText.style.transform = "translateY(0)";
+}, 250);
+
 });
