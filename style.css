@@ -191,4 +191,101 @@ footer {
 
 #reasonButton {
   margin-top: 5px;
+}/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gentle page entrance */
+.card {
+  animation: pageIn 1.2s ease-out;
+}
+
+/* Photo interaction */
+.christine-photo {
+  transition: transform .45s ease, box-shadow .45s ease;
+}
+
+.christine-photo:active {
+  transform: scale(.97);
+}
+
+.christine-photo:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 25px 55px rgba(255,79,145,.25);
+}
+
+/* Reasons card glow */
+.reason-box {
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.reason-box:active {
+  transform: scale(.98);
+}
+
+/* Button animation */
+button {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(255,79,145,.35);
+}
+
+/* Floating hearts */
+body::before,
+body::after {
+  content: "♥";
+  position: fixed;
+  font-size: 20px;
+  opacity: .08;
+  pointer-events: none;
+  animation: floatingHeart 7s ease-in-out infinite;
+}
+
+body::before {
+  left: 8%;
+  bottom: -30px;
+}
+
+body::after {
+  right: 10%;
+  bottom: -30px;
+  animation-delay: 3s;
+}
+
+/* Animations */
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes floatingHeart {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: .08;
+  }
+
+  80% {
+    opacity: .08;
+  }
+
+  100% {
+    transform: translateY(-100vh) rotate(25deg);
+    opacity: 0;
+  }
 }
